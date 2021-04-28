@@ -25,6 +25,9 @@
 - Media Queries
 */
 
+body {
+  background-color: black;
+}
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -62,7 +65,7 @@
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
   .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%;            }
+  .three.columns                  { width: 32%;            }
   .four.columns                   { width: 30.6666666667%; }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
@@ -112,6 +115,14 @@
 
 }
 
+@media (min-width: 750px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+    .three.columns                  { width: 22%;            }
+
+}
+
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -139,7 +150,7 @@ h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
 h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
 h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: 2rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: .75rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
@@ -415,16 +426,22 @@ there.
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
+
   .artistbio {
     overflow: hidden;
   }
@@ -439,7 +456,27 @@ there.
   overflow: auto;
 }
 
+.projects > img {
+	/* styling images in these boxes: setting the order they should be displayed;
+	images align to center of box; max-width of each image can't exceed 300px; */
+	order: -1;
+	align-self: center;
+	max-width: 100px;
+}
 
-.form-control {
+/* enlarge images when hovering over */
+.projects > img:hover {
+	position: relative;
+	transform: scale(1.25);
+	display:block;
+}
 
+.projects > a > img {
+	/* styling images in these boxes: setting the order they should be displayed;
+	images align to center of box; max-width of each image can't exceed 300px; */
+	/* order: -1; */
+	align-self: center;
+	max-width: 150px;
+	/* margin-left: -20px;
+	margin-top: -15px; */
 }
