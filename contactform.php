@@ -12,4 +12,4 @@ $headers = "From: ".$mailFrom;
 $txt = "You have received an email from ".$name.".\n\n".$message;
 
 mail($mailTo, $subject, $txt, $headers);
-header("Location: contact.php?mailsend");
+header("Location: index.php?mailsend");
