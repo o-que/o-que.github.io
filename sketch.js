@@ -30,7 +30,7 @@ function draw() {
   acc.setMag(0.15);
 	vel.add(acc);
   border.add(vel);
-  background(51, 21, 39, 5);
+  // background(51, 21, 39, 5);
 
     //Slowly increase 'a' and then animate 's' with
   //a smooth cyclical motion by finding the cosine of 'a'
@@ -44,11 +44,14 @@ function draw() {
 
   translate(windowWidth/1.5,windowHeight/1.5);
   noFill();
-  stroke(255);
-  strokeWeight(.5);
+  // stroke(255);
+  stroke(78, 77, 120);
+  strokeWeight(1);
   ellipse(centre.x,centre.y,100);
   ellipse(border.x,border.y,2.5);
-  stroke(255, 50);
+  // stroke(255, 50);
+  stroke(78, 77, 120);
+  strokeWeight(.25);
   rect(border.x*2,border.y, 7);
   // rect(border.x,border.y*2, 5/border.x);
   time++;

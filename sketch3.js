@@ -21,35 +21,26 @@ function setup() {
   canvas.style('z-index', '-1');
   centre = createVector(0,0);
   border = createVector(150,0);
-	vel = createVector(0,-20);
+	// vel = createVector(0,-20);
+	vel = createVector(0,-3);
 }
 
 function draw() {
-	var acc = centre.copy();
-  acc.sub(border);
-  acc.setMag(0.15);
-	vel.add(acc);
-  border.add(vel);
-  background(51, 21, 39, 5);
+  var acc = centre.copy();
+    acc.sub(border);
+    acc.setMag(0.25);
+  	vel.add(acc);
+    border.add(vel);
+    // background(20,50);
 
-    //Slowly increase 'a' and then animate 's' with
-  //a smooth cyclical motion by finding the cosine of 'a'
-  a = a + 0.04;
-  s = cos(a) * 2;
-
-  translate(width / 2, height / 2);
-  scale(s);
-  fill(0);
-  ellipse(0, 0, 200, 200);
-
-  translate(windowWidth/1.5,windowHeight/1.5);
-  noFill();
-  stroke(255);
-  strokeWeight(.5);
-  ellipse(centre.x,centre.y,100);
-  ellipse(border.x,border.y,2.5);
-  stroke(255, 50);
-  rect(border.x*2,border.y, 7);
-  // rect(border.x,border.y*2, 5/border.x);
-  time++;
+    translate(200,200);
+    noFill();
+    // stroke(100);
+    stroke(78, 77, 120);
+    strokeWeight(1);
+    rect(centre.x,centre.y, 5/border.y);
+    stroke(78, 77, 120);
+    strokeWeight(1);
+    ellipse(border.x,border.y,centre.y);
+    time++;
 }

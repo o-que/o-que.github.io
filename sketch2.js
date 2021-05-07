@@ -30,7 +30,7 @@ function draw() {
   acc.setMag(0.15);
 	vel.add(acc);
   border.add(vel);
-  background(4, 35, 51, 5);
+  // background(4, 35, 51, 5);
 
 
     //Slowly increase 'a' and then animate 's' with
@@ -42,8 +42,9 @@ function draw() {
   translate(width / 4.5, height / 3.5);
   scale(s);
   fill(0);
-  stroke(255);
-  strokeWeight(.5);
+  // stroke(255);
+  stroke(78, 77, 120);
+  strokeWeight(.25);
   for (let i = 0; i < 10; i ++) {
   ellipse(border.x, border.y, 20, 20);
   rotate(PI/5);
@@ -52,11 +53,14 @@ function draw() {
   translate(width / border.y, height / border.x);
   scale(s/2);
   fill(0);
-  stroke(255);
+  // stroke(255);
+  stroke(78, 77, 120);
   strokeWeight(.5);
   for (let i = 0; i < 10; i ++) {
   rect(border.y, border.x, 10, 10);
   rotate(PI/5);
   }
+
+
 
 }
