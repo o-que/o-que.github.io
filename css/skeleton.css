@@ -512,6 +512,28 @@ there.
   scroll-snap-type: mandatory;
   */
 }
+
+#slide-1:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+}
+#slide-2:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+}
+#slide-3:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+}
+#slide-4:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+}
+#slide-5:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+}
+
 .slides::-webkit-scrollbar {
   width: 10px;
   height: 50px;
