@@ -177,9 +177,11 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   /* color: #1EAEDB;  */
-  color: #4c7191; }
+  color: #4c7191; 
+}
 a:hover {
-  color: #4c8e91; }
+  color: #4c8e91;
+ }
 
 .activelink {
   color: #9977ba;
