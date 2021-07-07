@@ -497,7 +497,7 @@ there.
 /* enlarge images when hovering over */
 .projects > a > img:hover {
 	position: relative;
-	/* transform: scale(1.15); */
+	transform: scale(1.15);
 	/* display:block; */
 
 }
@@ -695,6 +695,7 @@ details[open] summary {
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 0px;
 }
 
 /* Track */
