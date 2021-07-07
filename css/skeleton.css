@@ -491,14 +491,15 @@ there.
 	images align to center of box; max-width of each image can't exceed 300px; */
 	order: -1;
 	align-self: center;
-	max-width: 100px;
+	/* max-width: 100px; */
 }
 
 /* enlarge images when hovering over */
-.projects > img:hover {
+.projects > a > img:hover {
 	position: relative;
-	transform: scale(1.25);
-	display:block;
+	/* transform: scale(1.15); */
+	/* display:block; */
+
 }
 
 .projects > a > img {
@@ -506,7 +507,7 @@ there.
 	images align to center of box; max-width of each image can't exceed 300px; */
 	/* order: -1; */
 	align-self: center;
-	max-width: 150px;
+	max-width: 100px;
 	/* margin-left: -20px;
 	margin-top: -15px; */
 }
@@ -547,50 +548,16 @@ there.
   /* background-color: rgba(255, 255, 255, 0.5);
   color: black; */
 }
-#slide-2:hover {
-  /* transform: scale(1.05); */
-  border-radius: 0%;
-  transition: all .5s ease;
-  /* background-color: rgba(255, 255, 255, 0.5);
-  color: black; */
-}
-#slide-3:hover {
-  /* transform: scale(1.05); */
-  border-radius: 0%;
-  transition: all .5s ease;
-  /* background-color: rgba(255, 255, 255, 0.5);
-  color: black; */
-}
-#slide-4:hover {
-  /* transform: scale(1.05); */
-  border-radius: 0%;
-  transition: all .5s ease;
-  /* background-color: rgba(255, 255, 255, 0.5);
-  color: black; */
-}
-#slide-5:hover {
-  /* transform: scale(1.05); */
-  border-radius: 0%;
-  transition: all .5s ease;
-  /* background-color: rgba(255, 255, 255, 0.5);
-  color: black; */
-}
-#slide-6:hover {
-  /* transform: scale(1.05); */
-  border-radius: 0%;
-  transition: all .5s ease;
-  /* background-color: rgba(255, 255, 255, 0.5);
-  color: black; */
-}
+
 
 .slides::-webkit-scrollbar {
   width: 10px;
-  height: 50px;
+  height: 10px;
 }
 
 .slides::-webkit-scrollbar-thumb {
   background: white;
-  border: solid black 20px;
+  /* border: solid black 20px; */
   /* border-radius: 20%; */
 }
 .slides::-webkit-scrollbar-track {
@@ -640,14 +607,14 @@ there.
 }
 
 img {
-  object-fit: cover;
+  /* object-fit: cover; */
   /* position: absolute; */
   top: 0;
   left: 0;
   width: 50%;
-  height: 50%;
+  /* height: 50%; */
   /* border: solid white 1px; */
-  border-radius: 50%;
+  /* border-radius: 50%; */
   padding: 5px;
 }
 
@@ -694,7 +661,7 @@ details {
     padding: 2em 2em 0;
     font-size: 10px;
     overflow: auto;
-    max-height: 150px;
+    max-height: 80px;
 }
 
 summary {
@@ -716,6 +683,8 @@ summary:active {
 
 details[open] {
     padding: .75em;
+    max-width: 250px;
+    margin: auto;
 }
 
 details[open] summary {
@@ -736,10 +705,53 @@ details[open] summary {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #4c8e91;
-  height: 5px;
+  /* height: 5px; */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #9977ba;
+}
+
+/* using filtered tags instead of carousel ------------------------ */
+
+#web:hover {
+  /* transform: scale(1.05); */
+  border-radius: 0%;
+  transition: all .5s ease;
+  /* background-color: rgba(255, 255, 255, 0.5);
+  color: black; */
+}
+
+.filterDiv {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  display: none;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 50%;
+  border: solid white 1px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  padding: 40px;
+  padding-top: 75px;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  display: block;
+}
+
+.filterDiv:hover {
+  border-radius: 0%;
+  transition: all .5s ease;
+}
+
+.gallery {
+  margin-top: 20px;
 }
