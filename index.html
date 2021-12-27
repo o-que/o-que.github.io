@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>ASRA</title>
+  <title>O-QUE</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -33,29 +34,339 @@
   <script src="p5.sound.min.js"></script>
 
 </head>
+
 <body>
-          <script src="sketch.js"></script>
+  <!-- <script src="smoothscroll.js"></script> -->
+
+  <script src="sketch.js"></script>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row" style="margin-top: 10%">
-      <nav class="three columns"><a class="activelink" href="index.html">O-QUE</a></nav>
-      <nav class="three columns"><a href="projects.html">PROJECTS</a></nav>
-      <nav class="three columns"><a href="statement.html">STATEMENT</a></nav>
-      <nav class="three columns"><a href="mailto:asra@o-que.com">CONTACT:<br>asra[at]o-que[dot]com</a></nav>
-      <!-- <nav class="three columns"><a href="contact.html">CONTACT</a></nav> -->
-    </div>
+  <div class="navbar">
+    <nav><a href="index.html">O-QUE</a></nav>
+    <nav><a href="#projects">PROJECTS</a></nav>
+    <nav><a href="#statement">STATEMENT</a></nav>
+    <nav><a href="#contact">CONTACT</a></nav>
+    <!-- <nav class="three columns"><a href="index.html">O-QUE</a></nav>
+    <nav class="three columns"><a href="#projects">PROJECTS</a></nav>
+    <nav class="three columns"><a href="#statement">STATEMENT</a></nav>
+    <nav class="three columns"><a href="mailto:asra@o-que.com">CONTACT:<br>asra[at]o-que[dot]com</a></nav> -->
+  </div>
+  <div class="container" id="home">
+
     <div class="row">
-      <div class="one-half column" style="margin-top: 10%">
-        <h4>ASRA</h4>
+      <div class="one-half column" style="margin-top: 20%">
+        <h4>O-QUE</h4>
         <div class="artistbio">
-        <p> is a digital artist, designer, and developer exploring the range of her artistic and technical practice. Her areas of focus include: generative art, design, web development, and more recently, motion graphics and videography. The post-pandemic world’s new need to recreate physical experiences in the virtual world has motivated her to begin exploring 3D and virtual spaces. As a natural continuation of her previous work, she has taken an interest in Creative AI, cellular automata, and other procedural artwork. ASRA wants to explore creative possibilities of algorithmic systems. Her work plays with structure, movement, distortion and vibration to produce kaleidoscopic and psychedelic imagery. She received her BFA in Digital Media Art from San José State University in Spring 2021.</p>
-      </div>
+          <p>is a collection of works by Asra Siddiqui, a digital artist, designer, and developer exploring the range of her artistic and technical practice. Her areas of focus include: generative art, design, web development, and more recently, motion graphics and videography. As a natural continuation of her previous work, she has taken an interest in Creative AI,
+            cellular automata, and other procedural artwork. Asra explores creative possibilities of algorithmic systems. Her work plays with structure, movement, distortion and vibration to produce kaleidoscopic and psychedelic imagery. She
+            received her BFA in Digital Media Art from San José State University in Spring 2021.</p>
+          <!-- <p>is a collection of works by ASRA, a digital artist, designer, and developer exploring the range of her artistic and technical practice. Her areas of focus include: generative art, design, web development, and more recently, motion graphics and videography. The
+            post-pandemic world’s new need to recreate physical experiences in the virtual world has motivated her to begin exploring 3D and virtual spaces. As a natural continuation of her previous work, she has taken an interest in Creative AI,
+            cellular automata, and other procedural artwork. ASRA wants to explore creative possibilities of algorithmic systems. Her work plays with structure, movement, distortion and vibration to produce kaleidoscopic and psychedelic imagery. She
+            received her BFA in Digital Media Art from San José State University in Spring 2021.</p> -->
+        </div>
       </div>
     </div>
+    <a href="#projects">
+      <h5 style="text-align: center;">explore<br>⤈</h5>
+    </a>
+  </div>
+  <div class="container">
+    <div class="row" id="projects">
+      <div class="one-half column" style="margin-top: 10%">
+        <h4>PROJECTS</h4>
+      </div>
+    </div>
+
+    <!--  change carousel to filtered tags, reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_elements -->
+
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">Show All</button>
+      <button class="btn" onclick="filterSelection('web')">Web Design</button>
+      <button class="btn" onclick="filterSelection('genart')">Generative / Procedural Art</button>
+      <button class="btn" onclick="filterSelection('graph')">Graphic Design</button>
+      <button class="btn" onclick="filterSelection('audio')">Audio / Videography</button>
+      <!-- <button class="btn" onclick="filterSelection('logo')">Logos & Icons</button> -->
+    </div>
+    <div class="gallery">
+      <div class="projects filterDiv audio">
+        <h5>
+          AMYGDALA
+        </h5>
+        <a href="https://newart.city/show/asra" target="_blank">
+          <img src="images/amygdala.png" alt="AMYGDALA">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe premiere pro, adobe after effects, blender, video | 2021<br><br>
+          A collection of recreated memories installed in 3D virtual space. Hosted on New Art City: https://newart.city/show/asra
+        </details>
+      </div>
+      <div class="projects filterDiv graph">
+        <h5>
+          BOOK COVERS
+        </h5>
+        <a href="bookcovers.pdf" target="_blank">
+          <img src="images/bookcover.png" alt="BOOK COVERS">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe illustrator | 2020<br><br>
+          A select few from my collection of redesigned book covers.
+        </details>
+      </div>
+      <div class="projects filterDiv web">
+        <h5>
+          BJERG
+        </h5>
+        <a href="https://converttosmartobject.github.io/bjerg/" target="_blank">
+          <img src="images/bjergdome.svg" alt="BJERG" style="max-width: 200%">
+        </a>
+        <details>
+          <summary>details</summary>
+          html, css, adobe illustrator | 2020<br><br>
+          My first foray into speculative design explores an exclusive society that leaves behind all the biological and physical problems we face today.
+        </details>
+      </div>
+      <div class="projects filterDiv web">
+        <h5>
+          THE FUTURE DEMOCRACIES LABORATORY
+        </h5>
+        <a href="https://the-democracy-project.github.io/" target="_blank">
+          <img src="images/2gears.svg" alt="THE FUTURE DEMOCRACIES LABORATORY">
+        </a>
+        <details>
+          <summary>details</summary>
+          html, css, javascript, adobe illustrator | 2021<br><br>
+          Work in progress! Please see the About page for more information on this project.
+        </details>
+      </div>
+      <div class="projects filterDiv audio">
+        <h5>
+          SPHEORIZE
+        </h5>
+        <video width="250" loop="true" autoplay="autoplay" controls>
+          <source src="spheorize.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <details>
+          <summary>details</summary>
+          adobe after effects | 2021<br><br>
+          An interesting reflection on my current state of mind.
+          Am I self-aware or self-absorbed?<br>Click on the fullscreen icon to see the teeny details.
+        </details>
+      </div>
+      <div class="projects filterDiv graph">
+        <h5>
+          SAVi LOGO
+        </h5>
+        <a href="SAVicomp2.pdf" target="_blank">
+          <img src="images/SAVi.png" alt="SAVi LOGO">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe illustrator | 2021<br><br>
+          Logo for SAVi, the Spatial Analytics & Data Visualization Center at SJSU's Department of Urban & Regional Planning.
+        </details>
+      </div>
+      <div class="projects filterDiv genart">
+        <h5>
+          OUR VIRUS
+        </h5>
+        <a href="https://converttosmartobject.github.io/website-v3.0/" target="_blank">
+          <img src="images/virus.svg" alt="OUR VIRUS">
+        </a>
+        <details>
+          <summary>details</summary>
+          p5.js javascript library, html, css | 2020<br><br>
+          This interactive piece is a reflection on the Coronavirus, and the everlasting
+          impact and connections between biological, technological, & ideological viruses.
+        </details>
+      </div>
+      <div class="projects filterDiv graph">
+        <h5>
+          LITTLE CEASARS LOGO & ICONS
+        </h5>
+        <a href="littleceasars.pdf" target="_blank">
+          <img src="images/ceasars.png" alt="Redesigned Little Ceasars Logo">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe illustrator | 2020<br><br>
+          My reimagining of the beloved pizzeria's branding.
+        </details>
+      </div>
+      <div class="projects filterDiv graph">
+        <h5>
+          LOOPS
+        </h5>
+        <a href="loops.pdf" target="_blank">
+          <img src="images/loopssnap.png" alt="LOOPS">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe illustrator | 2020<br><br>
+          A graphic visualization of a psychedelic rock song I had on.
+        </details>
+      </div>
+      <div class="projects filterDiv genart">
+        <h5>
+          WWW DOT
+        </h5>
+        <a href="https://converttosmartobject.github.io/www/" target="_blank">
+          <img src="images/www.png" alt="WWW DOT">
+        </a>
+        <details>
+          <summary>details</summary>
+          p5.js javascript library, html, css | 2019<br><br>
+          <br>
+          “Surrounded, detached, in measureless oceans of space,<br>
+          <br>
+          Ceaselessly musing, venturing, throwing, seeking the spheres to connect them”<br>
+          <br>
+          ─ Excerpt from A Noiseless Patient Spider by Walt Whitman, 1868<br>
+          <br>
+          These lines of Whitman’s poem are referring to his soul which, like a spider web, strives to create connections.
+          Even though the poem was written centuries before the internet was created, I felt like those lines really reflected
+          the World Wide Web which is why I wanted to incorporate them into my project. The colorful circles approaching the
+          center of the web are my abstract representation of flies. The spider represents the users of the web/internet.
+          The chaotic display of the text showcases how vast and abundant with information the internet is that people can
+          often get lost in it. The spider can also get lost in the spider web as its web gets larger and more intricate.
+          The spider is consumed by its own creation just like we are with ours.
+        </details>
+      </div>
+      <div class="projects filterDiv audio">
+        <h5>
+          KSJS PROMO
+        </h5>
+        <audio controls style="padding-bottom: 15px">
+          <source src="spongebob promo.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <details>
+          <summary>details</summary>
+          avid pro tools, audio recording | 2018<br><br>
+          I used audio recordings of my voice, a music box, microwave, bottles of liquid bubbling, and clips from
+          the television show Spongebob Squarepants to create an interesting commercial for SJSU's student run radio program, KSJS.
+        </details>
+      </div>
+      <div class="projects filterDiv graph">
+        <h5>
+          EdD LOGO
+        </h5>
+        <a href="eddMacecomp.pdf" target="_blank">
+          <img src="images/mace.svg" alt="EdD logo">
+        </a>
+        <details>
+          <summary>details</summary>
+          adobe illustrator | 2018<br><br>
+          New logo for the EdD Leadership Program at SJSU's Lurie College of Education.
+          Unfortunately it's currently not in use due to university regulations.
+        </details>
+      </div>
+      <!-- <div class="projects filterDiv web">
+        <h5>
+          MY OLD<br>PORTFOLIO
+        </h5>
+        <a href="https://converttosmartobject.github.io/" target="_blank">
+          <img src="images/oldpic.png" alt="old portfolio">
+        </a>
+        <details>
+          <summary>details</summary>
+          html, css, adobe photoshop | 2019<br><br>
+          As you can see, I've come a long way.
+        </details>
+      </div> -->
+
+    </div>
+
+    <script>
+      filterSelection("all")
+
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+  </div>
+  <div class="container">
+    <div class="row" id="statement">
+      <div style="margin-top: 10%">
+        <h4>ARTIST STATEMENT</h4>
+        <div class="artiststatement">
+          <p>
+            I play with computational systems such as code and artificial intelligence to create interesting and unexpected things. I want to blur the boundaries between art and design, creating work that is useful, visually engaging, and a medium
+            for personal expression. I especially like code as a medium because it can be super functional, creative, and unpredictable. My projects frequently deviate from my original plans as I experiment with the script and while I may find myself
+            facing walls in my exploration I also find exciting new possibilities.
+          </p>
+          <p>
+            Most of my work is centered around my personal experiences. I tend to orbit hyper specific events in my life. I obsess over the memories, and on each rethinking the memory is restructured and distorted. The distortion becomes solidified
+            and definition is added to the new imagining of the event. It begs the question, am I orbiting these events because they’re inherently significant or are they significant to me because I orbit them? I am absolutely fascinated by the
+            elaborate web of activity connecting and manipulating past, present, and future. This applies to both an individual and universal scale. I use videography to explore and express these events and the impact they have on me. I want to share
+            the stories I’ve held onto throughout my life, in a style that reflects the hazy, distorted, nonlinear, and precarious way that I remember them.
+          </p>
+          <p>
+            As for aesthetics, I love algorithmically precise structures and movements being morphed into organic and chaotic distortions. My influences include sacred geometry, biochemistry, and psychedelia. I play a lot with symbolism and hidden
+            narratives in my projects. I love working with animation because it is immersive, engaging, and shows a process of change. I use trails and webs both for their aesthetic and their conceptual utility. I admire the psychedelic imagery they
+            create, the complex interlinking of elements and how that imagery conceptually represents the ideas of recording, recalling, and the web of causality.
+          </p>
+          <p>
+            My use of lines is reflective of my interest in cellular automata, the idea of incredibly simple elements to create complexity, meaning, and dynamism. Waves, spirals, grids, and other common motifs in my art are extrapolations of the
+            line. Waves are especially compelling to me because they simultaneously represent light, sound, electromagnetism, and possibly all matter in the universe. Kaleidoscopic visuals intrigue me because of the complicated, ever evolving, even
+            vibrating, sequence of patterns. An infinite amount of very complex and different configurations arise from very simple lines and shapes. The creation of new things through the warping and mirroring of the preexisting further reflects my
+            conceptual interests in connections, distortions and movement.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h4 id="contact">CONTACT</h4>
+    <a href="mailto:asra@o-que.com">Email: asra[at]o-que[dot]com</a>
+    <a href="#home">
+      <h5 style="text-align: center; padding-top: 20px;">⤉<br>back to the beginning</h5>
+    </a>
   </div>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>
