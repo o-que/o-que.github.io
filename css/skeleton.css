@@ -614,40 +614,26 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
+
 /* Larger than mobile */
 @media (min-width: 900px) {
-  /* .artistbio {
-    background-color: #000000;
-    width: windowWidth/2;
-    height: 400px;
-    overflow: auto;
-  } */
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  /* .artistbio {
-    width: windowWidth/2;
-    height: 400px;
-    overflow: auto;
-  } */
+
 }
 
-@media screen and (max-width: 894px) {
   /* hamburger menu */
-  /* .navbar a:not(:first-child) {display: none;}
+/* @media screen and (max-width: 894px) {
+  .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
       float: center;
       display: block;
-    } */
-  /* .artistbio {
-      width: windowWidth/2;
-      height: 400px;
-      overflow: auto;
-    } */
-}
+    }
+} */
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 1350px) {
 
   /* hamburger menu */
   /* .navbar.responsive {position: relative;}
@@ -661,23 +647,6 @@ there.
     display: block;
     text-align: left;
   } */
-  .navbar {
-    overflow: hidden;
-    position: fixed;
-    left: -50px;
-    width: 100%;
-    z-index: 1;
-    /* background-color: black; */
-    padding-left: 20px;
-    background-color: #4e4d78;
-    }
-
-  .navbar a {
-    display: inline;
-    /* background-color: #4e4d78; */
-    /* background-color: white; */
-    padding: 5px;
-  }
 
   .one-half.column {
     padding-top: 50px;
@@ -705,9 +674,6 @@ there.
     overflow: auto;
   }
 
-  .navbar a {
-    display: block;
-  }
 
   /* styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  */
   /* .navbar .icon {
@@ -715,14 +681,9 @@ there.
   } */
 }
 
-@media (min-width: 895px) {
+@media (min-width: 800px) {
   .artistbio {
     overflow: hidden;
-  }
-
-  .one-half.column {
-    /* width: 50%; */
-    /* padding: 60px; */
   }
 }
 
@@ -743,10 +704,17 @@ there.
   .artistbio {
     overflow: hidden;
   }
+}
+
+@media (max-width: 1350px) {
+  /* .navbar {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
 
   .navbar a {
     display: block;
-  }
+  } */
 }
 
 .artiststatement {
@@ -1046,14 +1014,21 @@ details[open] summary {
 }
 
 .navbar {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 0px;
-  margin-bottom: 0px;
   overflow: hidden;
-  /* background-color: #000; */
   position: fixed;
-  /* top: 0px; */
+  /* left: -50px; */
   width: 100%;
   z-index: 1;
+  /* background-color: black; */
+  /* padding-left: 20px; */
+  background-color: #4e4d78;
+  text-align: center;
+  }
+
+.navbar a {
+  display: inline;
+  /* background-color: #4e4d78; */
+  /* background-color: white; */
+  padding: 20px;
+
 }
