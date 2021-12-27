@@ -127,7 +127,7 @@ body {
   }
 
   .one-half.column {
-    width: 50%;
+    /* width: 50%; */
   }
 
   /* Offsets */
@@ -605,6 +605,8 @@ hr {
   clear: both;
 }
 
+
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -614,7 +616,7 @@ on small devices, paste the mobile query code up in the buttons section and styl
 there.
 */
 /* Larger than mobile */
-@media (min-width: 400px) {
+@media (min-width: 900px) {
   .artistbio {
     /* background-color: #000000; */
     width: windowWidth/2;
@@ -624,10 +626,50 @@ there.
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  .artistbio {
+    /* background-color: #000000; */
+    width: windowWidth/2;
+    height: 400px;
+    overflow: auto;
+  }
+}
+
+/* styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  */
+.navbar .icon {
+  display: none;
+}
+
+  @media screen and (max-width: 600px) {
+    /* .navbar a:not(:first-child) {display: none;} */
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+    .artistbio {
+      /* background-color: #000000; */
+      width: windowWidth/2;
+      height: 400px;
+      overflow: auto;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    /* text-align: left; */
+  }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {
+@media (min-width: 894px) {
   .slides {
     display: flex;
     overflow-x: auto;
@@ -639,15 +681,36 @@ there.
     scroll-snap-type: mandatory;
     */
   }
+
+  .artistbio {
+    /* background-color: #000000; */
+    width: windowWidth/2;
+    height: 400px;
+    overflow: auto;
+  }
+}
+
+@media (min-width: 895px) {
+  .artistbio {
+    overflow: hidden;
+  }
 }
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+  .artistbio {
+    overflow: hidden;
+  }
+}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
   .artistbio {
     overflow: hidden;
+  }
+
+  .navbar {
+    position: fixed;
   }
 }
 
@@ -958,5 +1021,5 @@ details[open] summary {
 }
 
 .navbar a {
-
+  display: block;
 }

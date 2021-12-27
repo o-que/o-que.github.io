@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 
+<!-- styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -41,17 +45,33 @@
   <script src="sketch.js"></script>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navbar">
-    <nav><a href="index.html">O-QUE</a></nav>
-    <nav><a href="#projects">PROJECTS</a></nav>
-    <nav><a href="#statement">STATEMENT</a></nav>
-    <nav><a href="#contact">CONTACT</a></nav>
+  <div class="navbar" id="myNavbar">
+    <a href="#home">O-QUE</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#statement">STATEMENT</a>
+    <a href="#contact">CONTACT</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+</a>
     <!-- <nav class="three columns"><a href="index.html">O-QUE</a></nav>
     <nav class="three columns"><a href="#projects">PROJECTS</a></nav>
     <nav class="three columns"><a href="#statement">STATEMENT</a></nav>
     <nav class="three columns"><a href="mailto:asra@o-que.com">CONTACT:<br>asra[at]o-que[dot]com</a></nav> -->
   </div>
-  
+
+  <!-- javascript for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+  <script>
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+<!-- end of javascript for hamburger menu -->
+
   <div class="container" id="home">
 
     <div class="row">
