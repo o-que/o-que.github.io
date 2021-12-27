@@ -128,6 +128,7 @@ body {
 
   .one-half.column {
     /* width: 50%; */
+    padding: none;
   }
 
   /* Offsets */
@@ -605,8 +606,6 @@ hr {
   clear: both;
 }
 
-
-
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -617,45 +616,41 @@ there.
 */
 /* Larger than mobile */
 @media (min-width: 900px) {
-  .artistbio {
-    /* background-color: #000000; */
+  /* .artistbio {
+    background-color: #000000;
     width: windowWidth/2;
     height: 400px;
     overflow: auto;
-  }
+  } */
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .artistbio {
-    /* background-color: #000000; */
+  /* .artistbio {
     width: windowWidth/2;
     height: 400px;
     overflow: auto;
-  }
+  } */
 }
 
-/* styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  */
-.navbar .icon {
-  display: none;
-}
-
-  @media screen and (max-width: 600px) {
-    /* .navbar a:not(:first-child) {display: none;} */
+@media screen and (max-width: 894px) {
+  /* hamburger menu */
+  /* .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
-      float: right;
+      float: center;
       display: block;
-    }
-    .artistbio {
-      /* background-color: #000000; */
+    } */
+  /* .artistbio {
       width: windowWidth/2;
       height: 400px;
       overflow: auto;
-    }
-  }
+    } */
+}
 
-  @media screen and (max-width: 600px) {
-  .navbar.responsive {position: relative;}
+@media screen and (max-width: 800px) {
+
+  /* hamburger menu */
+  /* .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
@@ -664,7 +659,28 @@ there.
   .navbar.responsive a {
     float: none;
     display: block;
-    /* text-align: left; */
+    text-align: left;
+  } */
+  .navbar {
+    overflow: hidden;
+    position: fixed;
+    left: -50px;
+    width: 100%;
+    z-index: 1;
+    /* background-color: black; */
+    padding-left: 20px;
+    background-color: #4e4d78;
+    }
+
+  .navbar a {
+    display: inline;
+    /* background-color: #4e4d78; */
+    /* background-color: white; */
+    padding: 5px;
+  }
+
+  .one-half.column {
+    padding-top: 50px;
   }
 }
 
@@ -688,11 +704,25 @@ there.
     height: 400px;
     overflow: auto;
   }
+
+  .navbar a {
+    display: block;
+  }
+
+  /* styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  */
+  /* .navbar .icon {
+    display: none;
+  } */
 }
 
 @media (min-width: 895px) {
   .artistbio {
     overflow: hidden;
+  }
+
+  .one-half.column {
+    /* width: 50%; */
+    /* padding: 60px; */
   }
 }
 
@@ -700,6 +730,11 @@ there.
 @media (min-width: 1000px) {
   .artistbio {
     overflow: hidden;
+  }
+
+  .one-half.column {
+    /* width: 50%; */
+    /* padding: 60px; */
   }
 }
 
@@ -709,8 +744,8 @@ there.
     overflow: hidden;
   }
 
-  .navbar {
-    position: fixed;
+  .navbar a {
+    display: block;
   }
 }
 
@@ -1013,13 +1048,12 @@ details[open] summary {
 .navbar {
   margin-top: 50px;
   margin-left: 50px;
+  margin-right: 0px;
+  margin-bottom: 0px;
   overflow: hidden;
   /* background-color: #000; */
   position: fixed;
-  top: 0;
+  /* top: 0px; */
   width: 100%;
-}
-
-.navbar a {
-  display: block;
+  z-index: 1;
 }
