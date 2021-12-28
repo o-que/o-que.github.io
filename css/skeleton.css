@@ -621,7 +621,6 @@ there.
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-
 }
 
   /* hamburger menu */
@@ -649,7 +648,7 @@ there.
   } */
 
   .one-half.column {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 
@@ -1030,5 +1029,4 @@ details[open] summary {
   /* background-color: #4e4d78; */
   /* background-color: white; */
   padding: 20px;
-
 }
