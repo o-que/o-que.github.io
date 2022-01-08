@@ -623,6 +623,18 @@ there.
 @media (min-width: 550px) {
 }
 
+@media (max-width: 550px) {
+
+
+  .navbar a {
+    line-height: 50px;
+  }
+
+
+
+
+}
+
   /* hamburger menu */
 /* @media screen and (max-width: 894px) {
   .navbar a:not(:first-child) {display: none;}
@@ -1015,11 +1027,8 @@ details[open] summary {
 .navbar {
   overflow: hidden;
   position: fixed;
-  /* left: -50px; */
   width: 100%;
   z-index: 1;
-  /* background-color: black; */
-  /* padding-left: 20px; */
   background-color: #4e4d78;
   text-align: center;
   }
