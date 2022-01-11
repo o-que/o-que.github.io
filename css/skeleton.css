@@ -614,31 +614,23 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
-
 /* Larger than mobile */
-@media (min-width: 900px) {
-}
+@media (min-width: 900px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-}
+@media (min-width: 550px) {}
 
 @media (max-width: 550px) {
-
-
   .navbar a {
     line-height: 50px;
   }
 
-.row {
-  padding-top: 20%;
+  .row {
+    padding-top: 20%;
+  }
 }
 
-
-
-}
-
-  /* hamburger menu */
+/* hamburger menu */
 /* @media screen and (max-width: 894px) {
   .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
@@ -646,7 +638,6 @@ there.
       display: block;
     }
 } */
-
 @media screen and (min-width: 1350px) {
 
   /* hamburger menu */
@@ -661,7 +652,6 @@ there.
     display: block;
     text-align: left;
   } */
-
   .one-half.column {
     padding-top: 30px;
   }
@@ -687,7 +677,6 @@ there.
     height: 400px;
     overflow: auto;
   }
-
 
   /* styling for hamburger menu; reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  */
   /* .navbar .icon {
@@ -1034,11 +1023,38 @@ details[open] summary {
   z-index: 1;
   background-color: #4e4d78;
   text-align: center;
-  }
+}
 
 .navbar a {
   display: inline;
   /* background-color: #4e4d78; */
   /* background-color: white; */
   padding: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 30px;
+}
+
+.centerbook {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  padding: 20px;
+}
+
+.centerlarge {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.hr {
+  color: white;
 }
